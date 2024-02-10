@@ -12,6 +12,9 @@
     "repo:upstream": "git fetch upstream && git merge upstream/main"
   },
   "dependencies": {
+    "@mantine/core": "^7.5.1",
+    "@mantine/hooks": "^7.5.2",
+    "@tabler/icons-react": "^2.47.0",
     "concurrently": "^8.2.2"
   }
 }
