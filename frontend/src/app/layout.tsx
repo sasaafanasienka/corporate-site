@@ -10,6 +10,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: any }) {
+
+  const globalData = fetch('https://localhost:1337/api/global').then(res => res.json());
+  console.log(globalData)
+
   return (
     <html lang="en">
       <head>
@@ -23,7 +27,6 @@ export default function RootLayout({ children }: { children: any }) {
       <body>
         <MantineProvider theme={theme}>
           <Header/>
-          {/* <Header></Header> */}
           {children}
         </MantineProvider>
       </body>

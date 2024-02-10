@@ -1,9 +1,7 @@
-// 'use client'
+'use client'
 
-// import { useState } from 'react';
 import { Container, Group, Burger, Flex } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-// import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './header.module.css';
 
 const links = [
