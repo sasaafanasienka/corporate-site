@@ -14,7 +14,7 @@ export const metadata = {
 const RootLayout = async ({ children }) => {
 
   const {getData} = useStrapiData();
-  // const { attributes: navbarData } = await getData(Endpoint.Navbar)
+  const { attributes: navbarData } = await getData(Endpoint.Navbar)
 
   return (
     <html lang="en">
@@ -28,7 +28,9 @@ const RootLayout = async ({ children }) => {
       </head>
       <body> 
         <MantineProvider theme={theme}>
-          {/* <Header data={navbarData.navbar} /> */}
+          {/* {navbarData && 
+            <Header data={navbarData.navbar} />
+          } */}
           <main>
             {children}
           </main>
