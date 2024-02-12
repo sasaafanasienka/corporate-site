@@ -5,6 +5,7 @@ import { theme } from '../theme';
 import { Header } from '@/4_widgets/header';
 import { useStrapiData } from '@/7_shared/api';
 import { Endpoint } from '@/7_shared/api/routes';
+import { JsonView } from '@/7_shared/helpers';
 
 export const metadata = {
   title: 'Mantine Next.js template',
@@ -28,9 +29,9 @@ const RootLayout = async ({ children }) => {
       </head>
       <body> 
         <MantineProvider theme={theme}>
-          {/* {navbarData && 
+          {navbarData && 
             <Header data={navbarData.navbar} />
-          } */}
+          }
           <main>
             {children}
           </main>

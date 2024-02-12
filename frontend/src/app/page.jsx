@@ -8,7 +8,7 @@ const HomePage = async () => {
   // console.log(contentSections)
 
   return (
-    <> 
+    <>
       <div>s</div>
       {/* {(contentSections ?? []).map((section, index) => (
         <section>{index}</section>

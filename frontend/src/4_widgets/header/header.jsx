@@ -17,7 +17,7 @@ export const Header = ({data}) => {
   const items = data.links.map((link) => {
     const menuItems = link.links?.map((item) => (
       <Menu.Item key={item.link}>
-        <Link href={item.url}>{item.text}</Link>
+        <Link href={item.url} target={item.target ?? ''}>{item.text}</Link>
       </Menu.Item>
     ));
 
@@ -46,6 +46,7 @@ export const Header = ({data}) => {
         key={link.text}
         href={link.url}
         className={classes.link}
+        target={link.target ?? ''}
       >
         {link.text}
       </Link>
