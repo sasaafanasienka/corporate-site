@@ -1,4 +1,8 @@
-export enum Endpoint {
-  // Global = '/api/global?populate=*',
-  Navbar = '/global?populate[navbar][populate]=*'
+export const Endpoint = {
+  Navbar: '/global?populate[navbar][populate]=*',
+  Pages: {
+    Home: '/pages/1?filters=',
+    About: '/pages/2?filters=',
+  }
 }
+

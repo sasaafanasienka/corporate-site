@@ -28,11 +28,6 @@
     "show": {
       "type": "boolean",
       "default": false
-    },
-    "link": {
-      "type": "component",
-      "repeatable": false,
-      "component": "links.link"
     }
   }
 }

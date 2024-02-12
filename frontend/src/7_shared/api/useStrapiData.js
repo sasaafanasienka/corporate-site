@@ -5,7 +5,7 @@ import {fetchAPI} from '@/7_shared/api/fetch-api';
 
 export const useStrapiData = () => {
 
-  const fetchData = async (endpoint: Endpoint , isMeta = false) => {
+  const fetchData = async (endpoint, isMeta = false) => {
     try {
       const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
       // const path = `/global?populate=*`;
@@ -40,18 +40,23 @@ export const useStrapiData = () => {
     }
   }
 
-  const getData = async (endpoint: Endpoint) => {
+  const getData = async (endpoint) => {
     console.log('GETDATATATATAATATATA')
     const DATA = await fetchData(endpoint, false)
     console.log('GET DATA', DATA)
     return DATA
   }
 
-  const getMeta = async (endpoint: Endpoint) => {
+  const getMeta = async (endpoint) => {
     return await fetchData(endpoint, true)
   }
 
-  return {getData, getMeta}
+  const getPageData = async (id) => {
+    const data = await fetchData('http:localhost:1337/pages/' + id + '?filters=', true)
+    return data.attributes
+  }
+
+  return {getData, getMeta, getPageData}
 }
 
 //     try {

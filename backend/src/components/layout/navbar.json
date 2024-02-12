@@ -9,19 +9,29 @@
   "options": {},
   "attributes": {
     "links": {
-      "type": "component",
-      "repeatable": true,
-      "component": "links.link"
+      "type": "json"
     },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "links.button-link"
+    "logoDesktop": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     },
-    "navbarLogo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.logo"
+    "logoMobile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
     }
   }
 }

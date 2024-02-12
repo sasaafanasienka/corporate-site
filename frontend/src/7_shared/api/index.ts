@@ -1,0 +1,1 @@
+export { useStrapiData } from './useStrapiData.js'
